@@ -1,4 +1,4 @@
-import numpy as np
+# Tutorial Source: https://enlight.nyc/projects/neural-network
 
 # A neural network does the following:
 # 1) Takes inputs as a matrix (2D array of numbers)
@@ -13,6 +13,8 @@ import numpy as np
 # In the network, we will be predicting the score of our exam based on the inputs of how many hours we studied 
 # and how many hours we slept the day before. Our test score is the output.
 
+# Import statements
+import numpy as np
 
 ### NORMALIZATION OF TRAINING DATA ###
 
@@ -36,3 +38,15 @@ x_predicted = np.split(x_all, [3])[1] # testing data (Data neural network will i
 
 print(str(X))
 print(str(x_predicted))
+
+
+### FORWARD PROPAGATION ###
+# Calculates estimate as result using randomized weights and given input variables
+
+## Neural Network Class
+class neural_network(object):  
+    def __init__(self):
+    #parameters    
+        self.inputSize = 2    
+        self.outputSize = 1    
+        self.hiddenSize = 3
